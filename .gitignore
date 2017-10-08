@@ -1,3 +1,13 @@
+# Marko
+dist/
+static/
+.cache/
+*.bak.js
+*.bak
+*.marko.js
+dump.rdb
+.marko-devtools/
+
 # Logs
 logs
 *.log
