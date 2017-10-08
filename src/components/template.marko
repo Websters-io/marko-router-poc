@@ -1,0 +1,45 @@
+import { Router } from "marko-path-router";
+import routes from "../routes";
+import { getComponentByRoute, isInRoute } from "../helpers/get-component-by-route";
+
+class {
+  onMount() {
+    const appComponent = this.getEl("app");
+    const initialRoute = window.location.pathname;
+
+    Router.render({
+      routes,
+      initialRoute,
+      },
+      (err, result) => {
+        result.replaceChildrenOf(appComponent);
+      }
+    );
+  }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Server-side-rendering with marko-path-router</title>
+    <lasso-head/>
+  </head>
+  <body>
+    <div no-update key="app">
+      <if(isInRoute(routes, input.initialRoute || "/"))>
+        <include(getComponentByRoute(routes, input.initialRoute || "/")) />
+      </if>
+      <else>
+          <!--
+            If the route doesn't exist the server renders the `not-found` page.
+            On the client-side the router has to do the same, but thats not
+            implemented yet.
+          -->
+          <include("./not-found") />
+      </else>
+    </div>
+    <browser-refresh enabled="true" />
+    <lasso-body/>
+  </body>
+</html>

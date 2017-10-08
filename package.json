@@ -1,0 +1,30 @@
+{
+  "name": "marko-rendering-poc",
+  "version": "0.1.0",
+  "description": "Proof of concept for server- and client-side-rendering using the marko-path-router",
+  "main": "server.js",
+  "dependencies": {
+    "compression": "^1.7.1",
+    "express": "^4.15.5",
+    "lasso": "^2.11.16",
+    "lasso-marko": "^2.3.0",
+    "marko": "^4.4.28",
+    "marko-path-router": "^0.5.0"
+  },
+  "devDependencies": {
+    "browser-refresh": "^1.7.2",
+    "browser-refresh-taglib": "^1.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "debug": "browser-refresh server.js",
+    "production": "NODE_ENV=production node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "marko",
+    "lasso"
+  ],
+  "author": "libeanim",
+  "license": "GPL"
+}
