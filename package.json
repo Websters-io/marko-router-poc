@@ -1,5 +1,5 @@
 {
-  "name": "marko-rendering-poc",
+  "name": "marko-router-poc",
   "version": "0.1.0",
   "description": "Proof of concept for server- and client-side-rendering using the marko-path-router",
   "main": "server.js",
@@ -23,7 +23,10 @@
   },
   "keywords": [
     "marko",
-    "lasso"
+    "lasso",
+    "Server-side-rendering",
+    "client-side-rendering",
+    "router"
   ],
   "author": "libeanim",
   "license": "GPL"

@@ -16,3 +16,7 @@ npm start
 2. An `include`-tag is used to add a specific component dynamically according to the requested path on the server. (see `template.marko`).
 
 3. in the `onMount` function (which gets executed on the client) the router is initialized + rendered asynchronously and then replaces the content in the dom accordingly. (see `template.marko`).
+
+## References
+
+For more information click [here](https://github.com/charlieduong94/marko-path-router/issues/2).
